@@ -41,10 +41,7 @@ def sort_array(items):
     :param items:
     :return:
     """
-    min_index = min_val(items, 0)
-    items = swap(items, min_index, 0)
-
-    for i in range(1, len(items)):
+    for i in range(0, len(items)):
         min_index = min_val(items, i)
         items = swap(items, min_index, i)
 
