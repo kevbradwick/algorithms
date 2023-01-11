@@ -1,3 +1,3 @@
 # Algorithms
 
-A collection of computer algorithms implemented in Python
+A collection of computer algorithms implemented in Python.
