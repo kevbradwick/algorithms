@@ -3,10 +3,10 @@ from typing import List, Tuple
 
 def algo(numbers: List[int], search: int) -> Tuple[int, int]:
     """
-    Binary search will take a list, sort it, then keep halving the list until it finds 
-    the number you are searching for. It will return a tuple containing the index of the 
+    Binary search will take a list, sort it, then keep halving the list until it finds
+    the number you are searching for. It will return a tuple containing the index of the
     number and the number of attempts it took.
-    
+
     >>> algo([1, 2, 3], 2)
     (1, 1)
     >>> algo([1, 2, 3, 4, 5, 6, 7, 8], 6)
