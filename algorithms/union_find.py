@@ -9,7 +9,7 @@ class UnionFind:
         # the index of the element is the element itself and the value is an id that is
         # unique for each connected component. -1 means that the element is not connected
         # to any other element.
-        self.index: List[int] = [-1] * size
+        self.index: List[int] = list(range(size))
 
     def union(self, a: int, b: int) -> None:
         """
@@ -20,13 +20,8 @@ class UnionFind:
         a_id = self.index[a]
         b_id = self.index[b]
 
-        if b_id == -1:
-            self.index[b] = b_id = b
-
-        self.index[a] = b_id
-
         for i, v in enumerate(self.index):
-            if v != -1 and v == a_id:
+            if v == a_id:
                 self.index[i] = b_id
 
     def connected(self, p: int, q: int) -> bool:
