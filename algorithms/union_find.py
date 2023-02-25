@@ -1,7 +1,24 @@
-from typing import List, Tuple
+from typing import List
 
 
 class UnionFind:
+    """
+    Union-Find data structure.
+
+    This data structure is used to find connected components in a graph. An example can be
+    checking if two people are connected in a social network. It works by representing the
+    graph as a tree. Each node in the tree is a connected component. Two nodes are deemed
+    connected if they have the same root. The root of a node is the node that is not a
+    child of any other node.
+
+    For example;
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] -> has no connections
+    [0, 3, 2, 3, 4, 5, 6, 7, 8, 9] -> 1 and 3 are connected
+    [0, 3, 2, 7, 4, 5, 6, 7, 8, 9] -> 1, 3 and 7 are connected
+
+    Tests for this data structure can be found in tests/test_union_find.py
+    """
+
     def __init__(self, size: int) -> None:
         """
         Initialize a UnionFind data structure with size elements.
